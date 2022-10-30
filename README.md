@@ -36,25 +36,25 @@ Pour décider des paramètres des deux modèles, j'ai principalement regardé le
 
 ### RNN
 
-![rnn1](https://github.com/alexiobec/homework_deep_learning/blob/main/img/RNN1.png?raw=true)
+![rnn1](https://github.com/alexiobec/homework_deep_learning/blob/master/img/RNN1.png?raw=true)
 
 J'ai d'abord choisi une couche cachée de taille 5 avec un learning rate de 0.01. On peut voir que les deux loss convergent bien mais sont très proches durant tout l'entraînement. Le modèle n'a pas assez de paramètres, j'ai donc ensuite augmenté la taille de la couche cachée à 100.
 
-![rnn2](https://github.com/alexiobec/homework_deep_learning/blob/main/img/RNN2.png?raw=true)
+![rnn2](https://github.com/alexiobec/homework_deep_learning/blob/master/img/RNN2.png?raw=true)
 
 Avec une couche cachée de taille 100 et un learning rate de 0.01 la convergence ne se fait qu'après 90 époques et la loss sur les données de test explose. Le modèle a cette fois trop de paramètres, j'ai décidé de réduire la couche cachée à la taille 50.
 
-![rnn3](https://github.com/alexiobec/homework_deep_learning/blob/main/img/RNN3.png?raw=true)
+![rnn3](https://github.com/alexiobec/homework_deep_learning/blob/master/img/RNN3.png?raw=true)
 
 Avec une couche cachée de taille 50, la convergence se fait très vite, de l'ordre de 10 époques, mais il reste un peu d'instabilité, pour régler cela, j'ai réduit le learning rate de moitié, à 0.005.
 
 Il y a cependant une anomalie, la loss sur le jeu de test est tout le temps inférieure à celle du jeu d'entraînement. 
 
-![rnn4](https://github.com/alexiobec/homework_deep_learning/blob/main/img/RNN4.png?raw=true)
+![rnn4](https://github.com/alexiobec/homework_deep_learning/blob/master/img/RNN4.png?raw=true)
 
 Avec ce nouveau learning rate, la convergence est un peu plus lente mais il n'y a plus d'instabilité.
 
-![rnn5](https://github.com/alexiobec/homework_deep_learning/blob/main/img/RNN5.png?raw=true)
+![rnn5](https://github.com/alexiobec/homework_deep_learning/blob/master/img/RNN5.png?raw=true)
 
 Cependant, une couche cachée de taille 50 est peut-être pas nécessaire, j'ai décidé de la réduire à 30 et de garder 20 époques.
 
@@ -65,17 +65,17 @@ Cependant, une couche cachée de taille 50 est peut-être pas nécessaire, j'ai 
 
 ### CNN
 
-![cnn1](https://github.com/alexiobec/homework_deep_learning/blob/main/img/CNN1.png?raw=true)
+![cnn1](https://github.com/alexiobec/homework_deep_learning/blob/master/img/CNN1.png?raw=true)
 
 On peut d'abord observer que les deux courbes convergent bien. Cependant, elles se stabilisent à partir de 70 époques, pour augmenter la vitesse de convergence, j'ai augmenté le learning rate à 0.05.
 
 On peut aussi observer la même anomalie la loss sur le jeu de test est inférieure à celle du jeu d'entraînement avant 85 époques.
 
-![cnn2](https://github.com/alexiobec/homework_deep_learning/blob/main/img/CNN2.png?raw=true)
+![cnn2](https://github.com/alexiobec/homework_deep_learning/blob/master/img/CNN2.png?raw=true)
 
 La convergence est beaucoup plus rapide mais les deux courbes fluctuent beaucoup plus, spécifiquement la loss du test. Pour remédier à cela, j'ai baissé le learning rate au double de ce qu'il était au départ, 0.02.
 
-![cnn3](https://github.com/alexiobec/homework_deep_learning/blob/main/img/CNN3.png?raw=true)
+![cnn3](https://github.com/alexiobec/homework_deep_learning/blob/master/img/CNN3.png?raw=true)
 
 La convergence est environ deux fois plus rapide qu'avec le learning rate à 0.01, les oscillations sur la loss d'entraînement ont disparu. En vue de ces courbes, j'ai choisi 35 époques pour le modèle final.
 
@@ -91,9 +91,9 @@ J'ai créé un sous dataset evaluation issu du jeu de test en ne prenant que les
 
 Les valeurs que j'obtenais sur les deux modèles variant beaucoup en fonction de l'exécution, je prends la moyenne et l'écart-type sur 100 exécutions des deux modèles. Voici leurs graphes :
 
-![rnntot](https://github.com/alexiobec/homework_deep_learning/blob/main/img/rnntot.png?raw=true)
+![rnntot](https://github.com/alexiobec/homework_deep_learning/blob/master/img/rnntot.png?raw=true)
 
-![cnntot](https://github.com/alexiobec/homework_deep_learning/blob/main/img/cnntot.png?raw=true)
+![cnntot](https://github.com/alexiobec/homework_deep_learning/blob/master/img/cnntot.png?raw=true)
 
 * RNN :
   - moyenne : 18.09
